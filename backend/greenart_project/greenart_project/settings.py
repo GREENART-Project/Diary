@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from .db_conn import DATABASES
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,17 +97,6 @@ WSGI_APPLICATION = 'greenart_project.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default' : {
-        'ENGINE': 'django.db.backends.mysql'
-        , 'NAME': 'diary'
-        , 'USER': 'root'
-        , 'PASSWORD': 'diary#2023'
-        , 'HOST': 'localhost'
-        , 'PORT': '3306'
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
